@@ -25,3 +25,6 @@ Thumbs.db
 
 # Keep the ML model tracked
 !backend/app/models/phishing_model.pkl
+
+# Hackathon prep (personal, not for repo)
+HACKATHON_PREP.md
