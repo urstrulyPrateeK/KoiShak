@@ -11,6 +11,9 @@ import LearnPage from "./pages/Learn";
 import QuickCheckPage from "./pages/QuickCheck";
 import ScanPage from "./pages/Scan";
 import VerdictPage from "./pages/Verdict";
+import PayloadTypesPage from "./pages/PayloadTypes";
+import SafetyEnginePage from "./pages/SafetyEngine";
+import UpiDetectionPage from "./pages/UpiDetection";
 
 function Shell() {
   return (
@@ -39,6 +42,9 @@ function AnimatedRoutes() {
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/learn" element={<LearnPage />} />
           <Route path="/quickcheck" element={<QuickCheckPage />} />
+          <Route path="/features/payload-types" element={<PayloadTypesPage />} />
+          <Route path="/features/safety-engine" element={<SafetyEnginePage />} />
+          <Route path="/features/upi-detection" element={<UpiDetectionPage />} />
         </Route>
       </Routes>
     </AnimatePresence>

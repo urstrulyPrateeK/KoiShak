@@ -8,18 +8,21 @@ const features = [
     desc: "URL, UPI, Wi-Fi, SMS, Email, vCard, Geo, Calendar, Deep Links & more",
     icon: Shield,
     color: "from-teal/20 to-teal/5 border-teal/20 text-teal",
+    to: "/features/payload-types",
   },
   {
     title: "3-Layer Safety Engine",
     desc: "Classifier → Type-specific validators → Weighted risk scoring",
     icon: Sparkles,
     color: "from-violet/20 to-violet/5 border-violet/20 text-violet",
+    to: "/features/safety-engine",
   },
   {
     title: "UPI Fraud Detection",
     desc: "India-first collect-request & preset-amount checks — zero API calls",
     icon: WalletCards,
     color: "from-amber-500/20 to-amber-500/5 border-amber-400/20 text-amber-400",
+    to: "/features/upi-detection",
   },
 ];
 
@@ -97,18 +100,22 @@ export default function HomePage() {
 
       {/* Feature cards */}
       <section className="grid gap-3 sm:grid-cols-3">
-        {features.map(({ title, desc, icon: Icon, color }, i) => (
-          <motion.div
-            key={title}
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35 + i * 0.06 }}
-            className={`rounded-2xl border bg-gradient-to-b p-5 ${color}`}
-          >
-            <Icon className="h-6 w-6" />
-            <h2 className="mt-3 text-base font-semibold text-white">{title}</h2>
-            <p className="mt-2 text-xs text-slate-400 leading-relaxed">{desc}</p>
-          </motion.div>
+        {features.map(({ title, desc, icon: Icon, color, to }, i) => (
+          <Link key={title} to={to} className="block group">
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.35 + i * 0.06 }}
+              className={`rounded-2xl border bg-gradient-to-b p-5 ${color} transition-all duration-200 group-hover:scale-[1.02] group-hover:shadow-glow group-active:scale-[0.98]`}
+            >
+              <Icon className="h-6 w-6" />
+              <h2 className="mt-3 text-base font-semibold text-white">{title}</h2>
+              <p className="mt-2 text-xs text-slate-400 leading-relaxed">{desc}</p>
+              <div className="mt-3 flex items-center gap-1 text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                Learn more <ArrowRight className="h-3 w-3" />
+              </div>
+            </motion.div>
+          </Link>
         ))}
       </section>
 
