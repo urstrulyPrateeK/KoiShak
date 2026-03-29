@@ -1,5 +1,5 @@
-const CACHE_NAME = "koishak-v2";
-const STATIC_ASSETS = ["/", "/manifest.json", "/favicon.svg"];
+const CACHE_NAME = "koishak-v3";
+const STATIC_ASSETS = ["/manifest.json", "/favicon.svg"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -20,12 +20,16 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   const { request } = event;
   if (request.url.includes("/api/")) {
-    // Network-first for API calls
     event.respondWith(
       fetch(request).catch(() => caches.match(request))
     );
+  } else if (request.mode === "navigate") {
+    // Network-first for page navigations — never serve stale HTML
+    event.respondWith(
+      fetch(request).catch(() => caches.match("/"))
+    );
   } else {
-    // Cache-first for assets
+    // Cache-first for static assets (JS, CSS, images)
     event.respondWith(
       caches.match(request).then((cached) => cached || fetch(request))
     );
