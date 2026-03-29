@@ -3,8 +3,6 @@ set -e
 
 echo "=== KoiShak Build ==="
 
-# Frontend assets are pre-built in git; rebuild to ensure latest
-
 # Build frontend
 echo "Building frontend..."
 cd frontend

@@ -10,7 +10,7 @@ __pycache__/
 
 # Build artifacts
 frontend/dist/
-# backend/static/ - tracked for deployment
+backend/static/
 
 # IDE
 .vscode/

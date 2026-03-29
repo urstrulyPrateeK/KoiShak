@@ -42,11 +42,4 @@ if STATIC_DIR.exists():
         file_path = STATIC_DIR / full_path
         if file_path.exists() and file_path.is_file():
             return FileResponse(str(file_path))
-        return FileResponse(
-            str(STATIC_DIR / "index.html"),
-            headers={
-                "Cache-Control": "no-cache, no-store, must-revalidate",
-                "Pragma": "no-cache",
-                "Expires": "0",
-            },
-        )
+        return FileResponse(str(STATIC_DIR / "index.html"))
