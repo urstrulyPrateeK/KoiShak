@@ -1,0 +1,30 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="100%" stop-color="#131B2E"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+  <!-- Shield body -->
+  <path d="M256 72L396 132V272C396 360 336 432 256 464C176 432 116 360 116 272V132L256 72Z" fill="url(#shieldGrad)" opacity="0.15"/>
+  <path d="M256 72L396 132V272C396 360 336 432 256 464C176 432 116 360 116 272V132L256 72Z" stroke="url(#shieldGrad)" stroke-width="12" fill="none"/>
+  <!-- QR pattern dots inside shield -->
+  <rect x="196" y="168" width="32" height="32" rx="4" fill="url(#shieldGrad)" opacity="0.6"/>
+  <rect x="240" y="168" width="32" height="32" rx="4" fill="url(#shieldGrad)" opacity="0.4"/>
+  <rect x="284" y="168" width="32" height="32" rx="4" fill="url(#shieldGrad)" opacity="0.6"/>
+  <rect x="196" y="212" width="32" height="32" rx="4" fill="url(#shieldGrad)" opacity="0.3"/>
+  <rect x="284" y="212" width="32" height="32" rx="4" fill="url(#shieldGrad)" opacity="0.5"/>
+  <rect x="196" y="256" width="32" height="32" rx="4" fill="url(#shieldGrad)" opacity="0.6"/>
+  <rect x="240" y="256" width="32" height="32" rx="4" fill="url(#shieldGrad)" opacity="0.5"/>
+  <rect x="284" y="256" width="32" height="32" rx="4" fill="url(#shieldGrad)" opacity="0.6"/>
+  <!-- Magnifying glass -->
+  <circle cx="310" cy="340" r="40" stroke="#F8FAFC" stroke-width="10" fill="none" opacity="0.9"/>
+  <line x1="340" y1="370" x2="378" y2="408" stroke="#F8FAFC" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
+  <!-- Checkmark inside magnifier -->
+  <path d="M290 340L305 355L332 322" stroke="#06B6D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
