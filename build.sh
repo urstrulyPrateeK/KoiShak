@@ -3,6 +3,10 @@ set -e
 
 echo "=== KoiShak Build ==="
 
+# Clean previous build artifacts
+echo "Cleaning previous build..."
+rm -rf backend/static
+
 # Build frontend
 echo "Building frontend..."
 cd frontend
