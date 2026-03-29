@@ -3,9 +3,7 @@ set -e
 
 echo "=== KoiShak Build ==="
 
-# Clean previous build artifacts
-echo "Cleaning previous build..."
-rm -rf backend/static
+# Frontend assets are pre-built in git; rebuild to ensure latest
 
 # Build frontend
 echo "Building frontend..."
