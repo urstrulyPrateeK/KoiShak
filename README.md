@@ -77,3 +77,8 @@ npm run dev
 ## License
 
 MIT
+
+
+## Contributors
+
+- **Chavi Gautam** - Presentation & Demo Lead
