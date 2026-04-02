@@ -81,4 +81,4 @@ MIT
 
 ## Contributors
 
-- **Chavi Gautam** - Presentation & Demo Lead
+- **Chhavi Gautam** - Presentation & Demo Lead
